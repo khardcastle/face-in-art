@@ -48,17 +48,11 @@ Here we begin the implementation of a deep learning framework that will swap the
 
 Fortunately, as we are using methods of neural style transfer, or similar to neural style transfer, using VGG-19 networks pre-trained on ImageNet, we do not need large numbers of new images with which to train our network. However, there are large datasets of artwork and faces available on the internet, which we plan to take advantage of here in order to demonstrate our approach. To generate our dataset of artwork, we will use the Web Gallery of Art. This dataset is free to use for educational purposes and contains the meta data and links to images for more than 45,000 works of art, 31,000 of which are paintings. In order to create the dataset, we wrote write a script to download these images (code is attached at the end of this document). To generate a dataset of faces, we will either use our own headshots (an example is included in this report), or images downloaded from the celebA dataset (http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html). 
 
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=.3\textwidth]{mona_lisa.jpg}
-		\caption{{\bfseries A}. Example of artistic image containing a face (the Mona Lisa).} \label{fig:mona}
-	\end{center}
-\end{figure} 
 
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=.3\textwidth]{headshot_kiahhardcastle}
-		\caption{{\bfseries A}. Example of other image containing a face (a headshot of Kiah Hardcastle).} \label{fig:kiah}
+		\includegraphics[width=.45\textwidth]{face_crop_figure}
+		\caption{Examples demonstrating face cropping pipeline.} \label{fig:face_crop}
 	\end{center}
 \end{figure} 
 
