@@ -70,26 +70,17 @@ Second, we will then follow the procedure outlined in the paper "Visual Attribut
 
 Third, once we have generated a new image C that contains face C (the face in B, but in the style of face A), we must then replace the region around face A in image A (what was originally excised) with the new image C. It may be the case that additional smoothing, or matching of the original image will have to take place in order to smooth the boundaries between image C and the region around face A. 
 
-To get a sense of the data and the problem at hand, we performed neural style transfer on images that were already roughly matched in terms of semantic similarity. Images A (see Figure 1) and B (see Figure 2) were chosen so that faces in both images were quite prominent, and were in similar positions. Specifically, following the Neural Style Transfer code in the coursera course, we used the pre-trained weights from the VGG-19 network trained on ImageNet. We then used activations from layers within the network to generate content activations from image B, and style activations from image A. 
+To get a sense of the data and the problem at hand, we performed neural style transfer on images that were already roughly matched in terms of semantic similarity. Images A (see Figure 1) and B (see Figure 2) were chosen so that faces in both images were quite prominent, and were in similar positions.
 
 \section{Results}
 
 \subsection{Output of model}
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=.3\textwidth]{nst.png}
-		\caption{{\bfseries A}. Output of neural style transfer between images in Fig 1 and 2} \label{fig:nst}
-	\end{center}
-\end{figure} 
 
 \subsection{Model performance evaluation}
 
 As described above, our algorithm will return new images. One method of evaluation is qualitative analysis - i.e. determining by eye whether the face was successfully swapped within the piece of art. In order to quantify this more precisely, we plan to conduct polls of groups of people (~100) to determine if they believe the generated image looks like the original image with a face swap. Additionally, we may implement a more rigorous method, in which we attempt to detect the original face in the artistic painting via face verification. The performance of the face verification model could then serve as a proxy for how well the face from the non-art image was inpainted.
 
 \section{Summary}
-
-In summary, thus far we have applied neural style transfer to generate a new image that contains the style of an artwork piece, using the content of the headshot. This is a first step in our procedure, and while it does not perform very well, this allowed us to gain an understanding of the challenges in pre-processing data while allowing understanding the limitations of neural style transfer alone. 
 
 
 \begin{acknowledgments}

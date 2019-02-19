@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  19 FEB 2019 00:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  19 FEB 2019 12:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -363,41 +363,31 @@ File: headshot_kiahhardcastle.jpg Graphic file (type jpg)
 <use headshot_kiahhardcastle.jpg>
 Package pdftex.def Info: headshot_kiahhardcastle.jpg used on input line 60.
 (pdftex.def)             Requested size: 153.00156pt x 114.75491pt.
-\figandtabbox2=\box58
- <nst.png, id=3, 401.5pt x 301.125pt>
-File: nst.png Graphic file (type png)
-
-<use nst.png>
-Package pdftex.def Info: nst.png used on input line 81.
-(pdftex.def)             Requested size: 153.00156pt x 114.75491pt.
  [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./mona_
-lisa.jpg>] [2 <./headshot_kiahhardcastle.jpg> <./nst.png (PNG copy)>] (./Projec
-t Milestone.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+lisa.jpg> <./headshot_kiahhardcastle.jpg>]
+(./Project Milestone.aux) ) 
 Here is how much of TeX's memory you used:
- 4074 strings out of 492995
- 58736 string characters out of 6132704
- 136500 words of memory out of 5000000
- 7578 multiletter control sequences out of 15000+600000
+ 4060 strings out of 492995
+ 58576 string characters out of 6132704
+ 135524 words of memory out of 5000000
+ 7565 multiletter control sequences out of 15000+600000
  13132 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,6n,41p,998b,301s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
-Output written on "Project Milestone.pdf" (2 pages, 582964 bytes).
+</usr/local/texlive/2017/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmss10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmssbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmssi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy6.pfb>
+Output written on "Project Milestone.pdf" (1 page, 308879 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 38 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
