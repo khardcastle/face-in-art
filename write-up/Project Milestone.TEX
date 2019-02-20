@@ -45,7 +45,7 @@ Here we begin the implementation of a deep learning framework that will swap the
 
 \section{Approach and Results}
 
-Successful completion of our task requires several steps. First, we must identify the region containing the face in both images (art image = image A with face A, other image = image B with face B). Note that we assume that images with only one face are considered. Once face A and face B are identified and cropped out of the image, we must then align the faces. Specifically, we require that the two faces have similar positions for the eyes, nose, mouth, and chin. Using the aligned faces, we then generate a new face C, using neural style transfer (or visual attribute transfer, see below). Face C contains the content of face B, in the style of face A. Next, we will "un-align" Face C, or apply the opposite transformation applied on face A during alignment in order to get face C in the pose of face A, and replace face A with the new face C. Finally, we will smooth the boundaries between the excised region surrounding face C and the rest of the image. 
+Successful completion of our task requires several steps. First, we must identify the region containing the face in both images (art image = image A with face A, other image = image B with face B). Note that we assume that images with only one face are considered. Once face A and face B are identified and cropped out of the image, we must then align the faces. Specifically, we require that face B be in the same pose, or alignment, as face A. Using the aligned faces, we then generate a new face C, using neural style transfer (or visual attribute transfer, see below). Face C contains the content of face B, in the style of face A. Next, we will replace face A with the new face C in the image. Finally, we will smooth the boundaries between the excised region surrounding face C and the rest of the image. 
 
 \subsection{Data collection}
 
@@ -64,7 +64,7 @@ The first step in our pipeline is to identify the face in both images (image A a
 
 \subsection{Data pre-processing: face-alignment}
 
-The second step in our pipeline is to properly align the faces so that the pose of the face is similar between the two images. Specifically, we want the major face landmarks (eyes, nose, mouth, chin) to be in similar locations, and both faces should be facing forward. To accomplish this, we plan to use the method implemented in the paper "Beyond Face Rotation: Global and Local Perception GAN for Photorealistic and Identity Preserving Frontal View Synthesis". For now, we have chosen test images that are already facing forward and are similar in landmark position, but we will plan on completing this step more rigorously for our final project. 
+The second step in our pipeline is to properly align the faces so that the pose of the face is similar between the two images. Specifically, we want face B to be in the same pose as face A - e.g. the major face landmarks (eyes, nose, mouth, chin) should be in similar locations. To accomplish this, we plan to use the method implemented in the paper "Beyond Face Rotation: Global and Local Perception GAN for Photorealistic and Identity Preserving Frontal View Synthesis". For now, we have chosen test images that are similar in landmark position (and are facing forward), but we will plan on completing this step more rigorously for our final project. 
 
 \subsection{Style transfer between face images}
 
@@ -80,10 +80,6 @@ The output of Neural Style Transfer is shown below in Figure 2. As you can see, 
 		\caption{Example output using Neural Style Transfer.} \label{fig:nst}
 	\end{center}
 \end{figure} 
-
-\subsection{Re-aligning generated face with face in artistic image}
-
-Once the new face image has been generated, we must align this image with the original pose of face A in image A. In order to do this, we will apply the inverse transformation used to align the face. We are currently working on methods to align and "un"-align the faces within the images and plan on having this piece of the procedure implemented for the final project. 
 
 \subsection{Face-replacement in artistic image}
 
