@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  19 FEB 2019 14:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  20 FEB 2019 00:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -348,37 +348,61 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-\figandtabbox0=\box56
+
+ ======================================================================== 
+ C A R E F U L !!!!!
+ 
+ You have used \begin{figure}[h] !
+ If there are any figures that appear earlier on the page
+ they may be numbered incorrectly.
+ 
+ Please check this and every other page on which you have used 
+ \begin{figure}[h] !
+ 
+ ======================================================================== 
 
 <face_crop_figure.png, id=1, 971.63pt x 630.355pt>
 File: face_crop_figure.png Graphic file (type png)
  <use face_crop_figure.png>
-Package pdftex.def Info: face_crop_figure.png used on input line 54.
+Package pdftex.def Info: face_crop_figure.png used on input line 60.
 (pdftex.def)             Requested size: 229.49844pt x 148.88368pt.
 
 [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./face_
-crop_figure.png>] (./Project Milestone.aux) ) 
+crop_figure.png>]
+
+
+ C A R E F U L !! \begin{figure}[h] used on this page !
+
+
+<neural_style_transfer_output.png, id=15, 627.34375pt x 707.64375pt>
+File: neural_style_transfer_output.png Graphic file (type png)
+
+<use neural_style_transfer_output.png>
+Package pdftex.def Info: neural_style_transfer_output.png used on input line 79
+.
+(pdftex.def)             Requested size: 203.99689pt x 230.11107pt.
+ [2 <./neural_style_transfer_output.png>] (./Project Milestone.aux) ) 
 Here is how much of TeX's memory you used:
  4038 strings out of 492995
- 58286 string characters out of 6132704
- 141510 words of memory out of 5000000
- 7546 multiletter control sequences out of 15000+600000
+ 58396 string characters out of 6132704
+ 137519 words of memory out of 5000000
+ 7545 multiletter control sequences out of 15000+600000
  12824 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,6n,41p,998b,272s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2017/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2017/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy6.pfb>
-Output written on "Project Milestone.pdf" (1 page, 2621277 bytes).
+ 39i,6n,40p,1435b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+Output written on "Project Milestone.pdf" (2 pages, 4512102 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 23 compressed objects within 1 object stream
+ 40 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
