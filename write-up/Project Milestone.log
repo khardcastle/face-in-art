@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  20 FEB 2019 00:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  20 FEB 2019 14:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -256,7 +256,11 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \WF@everypar=\toks23
 Package: wrapfig 2003/01/31  v 3.6
 )
-(./Project Milestone.aux)
+(./Project Milestone.aux
+
+LaTeX Warning: Label `fig:nst' multiply defined.
+
+)
 \openout1 = `"Project Milestone.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
@@ -271,8 +275,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
-
-(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count130
 \scratchdimen=\dimen143
@@ -367,42 +370,69 @@ File: face_crop_figure.png Graphic file (type png)
 Package pdftex.def Info: face_crop_figure.png used on input line 60.
 (pdftex.def)             Requested size: 229.49844pt x 148.88368pt.
 
-[1
-
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./face_
-crop_figure.png>]
 
 
  C A R E F U L !! \begin{figure}[h] used on this page !
 
 
-<neural_style_transfer_output.png, id=15, 627.34375pt x 707.64375pt>
-File: neural_style_transfer_output.png Graphic file (type png)
+<landmark_id.png, id=3, 953.5625pt x 603.25375pt>
+File: landmark_id.png Graphic file (type png)
+ <use landmark_id.png>
+Package pdftex.def Info: landmark_id.png used on input line 71.
+(pdftex.def)             Requested size: 203.99689pt x 129.05267pt.
 
-<use neural_style_transfer_output.png>
-Package pdftex.def Info: neural_style_transfer_output.png used on input line 79
-.
-(pdftex.def)             Requested size: 203.99689pt x 230.11107pt.
- [2 <./neural_style_transfer_output.png>] (./Project Milestone.aux) ) 
+[1
+
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./face_
+crop_figure.png>]
+Overfull \hbox (15.51973pt too wide) in paragraph at lines 97--98
+\OT1/cmr/m/n/9 https://colab.research.google.com/github/titu1994/Neural-Style-
+ []
+
+
+
+ C A R E F U L !! \begin{figure}[h] used on this page !
+
+
+<neural_style_transfer_output_v2.png, id=16, 609.27625pt x 712.6625pt>
+File: neural_style_transfer_output_v2.png Graphic file (type png)
+
+<use neural_style_transfer_output_v2.png>
+Package pdftex.def Info: neural_style_transfer_output_v2.png used on input line
+ 101.
+(pdftex.def)             Requested size: 203.99689pt x 238.61565pt.
+
+Overfull \vbox (2.0pt too high) has occurred while \output is active []
+
+ [2 <./landmark_id.png> <./neural_style_transfer_output_v2.png>] [3]
+(./Project Milestone.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4038 strings out of 492995
- 58396 string characters out of 6132704
- 137519 words of memory out of 5000000
- 7545 multiletter control sequences out of 15000+600000
+ 4043 strings out of 492995
+ 58505 string characters out of 6132704
+ 136558 words of memory out of 5000000
+ 7549 multiletter control sequences out of 15000+600000
  12824 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,6n,40p,1435b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
-Output written on "Project Milestone.pdf" (2 pages, 4512102 bytes).
+ 39i,6n,40p,1427b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.p
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on "Project Milestone.pdf" (3 pages, 6676715 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 65 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
