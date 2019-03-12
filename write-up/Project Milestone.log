@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  20 FEB 2019 14:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  20 FEB 2019 23:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -256,6 +256,11 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \WF@everypar=\toks23
 Package: wrapfig 2003/01/31  v 3.6
 )
+(/usr/local/texlive/2017/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
 (./Project Milestone.aux
 
 LaTeX Warning: Label `fig:nst' multiply defined.
@@ -263,18 +268,18 @@ LaTeX Warning: Label `fig:nst' multiply defined.
 )
 \openout1 = `"Project Milestone.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
  (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count130
@@ -341,16 +346,45 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 34.
+LaTeX Font Info:    Try loading font information for U+msa on input line 35.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 34.
+LaTeX Font Info:    Try loading font information for U+msb on input line 35.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+
+LaTeX Warning: Citation `neumann2005color' on page 1 undefined on input line 45
+.
+
+
+LaTeX Warning: Citation `gatys2015neural' on page 1 undefined on input line 45.
+
+
+
+LaTeX Warning: Citation `li2016combining' on page 1 undefined on input line 47.
+
+
+
+LaTeX Warning: Citation `jiang2017fashion' on page 1 undefined on input line 47
+.
+
+
+LaTeX Warning: Citation `selim2016painting' on page 1 undefined on input line 4
+7.
+
+
+LaTeX Warning: Citation `WebGallery' on page 1 undefined on input line 57.
+
+
+LaTeX Warning: Citation `liu2018large' on page 1 undefined on input line 57.
+
+
+LaTeX Warning: Citation `Medium' on page 1 undefined on input line 61.
+
 
  ======================================================================== 
  C A R E F U L !!!!!
@@ -367,27 +401,43 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <face_crop_figure.png, id=1, 971.63pt x 630.355pt>
 File: face_crop_figure.png Graphic file (type png)
  <use face_crop_figure.png>
-Package pdftex.def Info: face_crop_figure.png used on input line 60.
+Package pdftex.def Info: face_crop_figure.png used on input line 65.
 (pdftex.def)             Requested size: 229.49844pt x 148.88368pt.
+
+[1
+
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `dlib' on page 2 undefined on input line 72.
 
 
 
  C A R E F U L !! \begin{figure}[h] used on this page !
 
 
-<landmark_id.png, id=3, 953.5625pt x 603.25375pt>
+<landmark_id.png, id=15, 953.5625pt x 603.25375pt>
 File: landmark_id.png Graphic file (type png)
  <use landmark_id.png>
-Package pdftex.def Info: landmark_id.png used on input line 71.
+Package pdftex.def Info: landmark_id.png used on input line 76.
 (pdftex.def)             Requested size: 203.99689pt x 129.05267pt.
 
-[1
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./face_
-crop_figure.png>]
-Overfull \hbox (15.51973pt too wide) in paragraph at lines 97--98
-\OT1/cmr/m/n/9 https://colab.research.google.com/github/titu1994/Neural-Style-
+LaTeX Warning: Citation `zhu2019face' on page 2 undefined on input line 81.
+
+
+LaTeX Warning: Citation `liao2017visual' on page 2 undefined on input line 85.
+
+
+Overfull \hbox (6.2423pt too wide) detected at line 98
+\OML/cmm/m/it/9 J[]\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 B; B[]\OT1/cmr/m/n/9 ) = [] 
+\OML/cmm/m/it/9 ^^U[][] []\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 B[]\OT1/cmr/m/n/9 (\O
+ML/cmm/m/it/9 A\OT1/cmr/m/n/9 )[] \OMS/cmsy/m/n/9 ^^@ \OML/cmm/m/it/9 B[]\OT1/c
+mr/m/n/9 (\OML/cmm/m/it/9 B[]\OT1/cmr/m/n/9 )[])[]
  []
+
+
+LaTeX Warning: Citation `NeuralStyleTranferGithub' on page 2 undefined on input
+ line 102.
 
 
 
@@ -399,40 +449,42 @@ File: neural_style_transfer_output_v2.png Graphic file (type png)
 
 <use neural_style_transfer_output_v2.png>
 Package pdftex.def Info: neural_style_transfer_output_v2.png used on input line
- 101.
+ 106.
 (pdftex.def)             Requested size: 203.99689pt x 238.61565pt.
+ [2 <./face_crop_figure.png> <./landmark_id.png>]
+No file "Project Milestone".bbl.
+[3 <./neural_style_transfer_output_v2.png>] (./Project Milestone.aux)
 
-Overfull \vbox (2.0pt too high) has occurred while \output is active []
+LaTeX Warning: There were undefined references.
 
- [2 <./landmark_id.png> <./neural_style_transfer_output_v2.png>] [3]
-(./Project Milestone.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4043 strings out of 492995
- 58505 string characters out of 6132704
- 136558 words of memory out of 5000000
- 7549 multiletter control sequences out of 15000+600000
- 12824 words of font info for 47 fonts, out of 8000000 for 9000
+ 4146 strings out of 492995
+ 59867 string characters out of 6132704
+ 139391 words of memory out of 5000000
+ 7647 multiletter control sequences out of 15000+600000
+ 13132 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,6n,40p,1427b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9
-.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.p
-fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb
-></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on "Project Milestone.pdf" (3 pages, 6676715 bytes).
+ 39i,6n,40p,1351b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.p
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on "Project Milestone.pdf" (3 pages, 6686726 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 69 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

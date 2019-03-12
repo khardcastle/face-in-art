@@ -1,0 +1,65 @@
+\begin{thebibliography}{10}
+
+\bibitem{NeuralStyleTranferGithub}
+Dlib.
+\newblock Neural style transfer implementation, 2018.
+
+\bibitem{gatys2015neural}
+Leon~A Gatys, Alexander~S Ecker, and Matthias Bethge.
+\newblock A neural algorithm of artistic style.
+\newblock {\em arXiv preprint arXiv:1508.06576}, 2015.
+
+\bibitem{dlib}
+github.
+\newblock Dlib face detection and landmark identification, 2018.
+
+\bibitem{jiang2017fashion}
+Shuhui Jiang and Yun Fu.
+\newblock Fashion style generator.
+\newblock In {\em IJCAI}, pages 3721--3727, 2017.
+
+\bibitem{li2016combining}
+Chuan Li and Michael Wand.
+\newblock Combining markov random fields and convolutional neural networks for
+  image synthesis.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 2479--2486, 2016.
+
+\bibitem{liao2017visual}
+Jing Liao, Yuan Yao, Lu~Yuan, Gang Hua, and Sing~Bing Kang.
+\newblock Visual attribute transfer through deep image analogy.
+\newblock {\em arXiv preprint arXiv:1705.01088}, 2017.
+
+\bibitem{liu2018large}
+Ziwei Liu, Ping Luo, Xiaogang Wang, and Xiaoou Tang.
+\newblock Large-scale celebfaces attributes (celeba) dataset.
+\newblock {\em Retrieved August}, 15:2018, 2018.
+
+\bibitem{neumann2005color}
+L{\'a}szl{\'o} Neumann and Attila Neumann.
+\newblock Color style transfer techniques using hue, lightness and saturation
+  histogram matching.
+\newblock In {\em Computational Aesthetics}, pages 111--122. Citeseer, 2005.
+
+\bibitem{WebGallery}
+Web~Gallery of~Art.
+\newblock Web gallery of art searchable database of european fine arts and
+  architecture, 1996.
+
+\bibitem{selim2016painting}
+Ahmed Selim, Mohamed Elgharib, and Linda Doyle.
+\newblock Painting style transfer for head portraits using convolutional neural
+  networks.
+\newblock {\em ACM Transactions on Graphics (ToG)}, 35(4):129, 2016.
+
+\bibitem{Medium}
+Vidhya.
+\newblock Face detection model in python, 2018.
+
+\bibitem{zhu2019face}
+Xiangyu Zhu, Xiaoming Liu, Zhen Lei, and Stan~Z Li.
+\newblock Face alignment in full pose range: A 3d total solution.
+\newblock {\em IEEE transactions on pattern analysis and machine intelligence},
+  41(1):78--92, 2019.
+
+\end{thebibliography}
