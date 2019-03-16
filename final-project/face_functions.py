@@ -248,7 +248,7 @@ def clone_image(hullIndex2,image1,image2):
     for i in range(0, len(hullIndex2)):
         hull8U.append((hullIndex2[i][0], hullIndex2[i][1]))
 
-    mask = np.zeros(image2.shape, dtype = image2.dtype)  
+    mask = np.zeros(image2.shape, dtype = image2.dtype) 
 
     cv2.fillConvexPoly(mask, np.int32(hull8U), (255, 255, 255))
 
@@ -259,5 +259,5 @@ def clone_image(hullIndex2,image1,image2):
     # Clone seamlessly.
     output = cv2.seamlessClone(np.uint8(image1), image2, mask, center, cv2.NORMAL_CLONE)
     
-    return output
+    return output, mask
 
