@@ -1,4 +1,4 @@
-FILES = Final_Project.pdf
+FILES = test.pdf
 
 EXT = tex
 

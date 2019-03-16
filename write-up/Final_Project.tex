@@ -9,15 +9,13 @@
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
 \usepackage{graphicx}
-\title{Formatting instructions for CS230-Winter 2018}
+\title{Make yourself into a work of art}
 
 \author{
-  John K.~Doe\thanks{Use footnote for providing further
-    information about author (webpage, alternative
-    address)---\emph{not} for acknowledging funding agencies.} \\
-  Department of Computer Science\\
+  Kiah Hardcastle* and Julie Makelberge** \\
+  Neuroscience PhD Program*, Graduate School of Business** \\
   Stanford University\\
-  \texttt{***@stanford.edu} \\
+  \texttt{khardcas@stanford.edu*, juliemkb@stanford.edu**} \\
   %% examples of more authors
   %% \And
   %% Coauthor \\
@@ -51,19 +49,15 @@
 \maketitle
 
 \begin{abstract}
-The abstract should consist of 1 paragraph describing the motivation for your paper and a high-level explanation of the methodology you used/results obtained.
+In this paper, we outline the implementation of a neural style transfer framework that will integrate a person's face in an artistic painting. For example, given a headshot and a picture of the Mona Lisa, this framework would inpaint the headshot face into the face of the Mona Lisa, while retaining the artistic style of the Mona Lisa. There are a number of existing applications that have focussed face swapping in recent years, however they have generally focussed on doing so for photograph images. Furthermore, the few methodologies that have used neural style transfer to adjusting such photos to an artistic style, have constrained their solution to well-aligned images that contain only a face (i.e., cropped images), without taking into account the pose of the face. Our approach is novel in that we aim to retaining the style and pose of the original work of art's face, regardless of the pose of the supplied image, and will reintroduce the face in the work of art as a whole. 
 \end{abstract}
 
-\section{Introduction}	
-Explain the problem and why it is important. Discuss your motivation for pursuing this
-problem. Give some background if necessary. Clearly state what the input and output
-is. Be very explicit: “The input to our algorithm is an {image, amplitude, patient age,
-rainfall measurements, grayscale video, etc.}. We then use a {SVM, neural network, linear
-regression, etc.} to output a predicted {age, stock price, cancer type, music genre, etc.}.”
-This is very important since different teams have different inputs/outputs spanning different
-application domains. Being explicit about this makes it easier for readers. If you are using
-your project for multiple classes, add a paragraph explaining which components of the
-project were used for each class.
+\section{Introduction}  
+Neural style transfer is the technique of using deep neural networks to transfer the style of a given reference image to the content of another. Traditionally, such problems have been adressed with classic image processing techniques such as histogram matching \cite{neumann2005color}. However, in 2015 Gatys et all. \cite{gatys2015neural} introduced a novel technique that leverages the power of Convolutional Neural Networks to emulate famous painting styles in natural images. In their seminal paper, they proposed to use the encoding from different layers of a pre-trained CNN, to capture the style elements and content elements of images. They then used an interative approach to optimise an image with the objective of minimizing the distance between the style elements of the image and the reference work of art, while keeping changes to the content as small as possible. 
+\par
+Their work has inspired a number of new neural transfer algorithms, ranging from general models such as the work of Li and Wand \cite{li2016combining} that combined generative Markov random field models with deep convolutional neural networks, to highly specialised domain-specific models such as Jiang anf Fu's Fashion style generator \cite{jiang2017fashion}. While general models have shown great potential in a large number of applications, they have generally introduced visual artifacts which are especially striking in faces, given human's sensitivity for facial irregularities. The work of Selim et all. \cite{selim2016painting} introduced the first approach for single-example based head portrait painting not constrained to a specific style. Their approach was successful by introducing additional constraints that exploit human facial geometry through the notion of gains maps. However, their methodology focused on front-facing cropped facial images and does not yet generalise to different facial positions or introduction within the wider context of a full painting. 
+\par
+In this work, we aim to expand on the work of Selim et all by introducing a framework that combines different Neural Transfer techniques to tackle the challenge of introducing faces of slightly varing positions in a work of art. Our goal is to create a resulting image that looks similar to our reference work of art, but with the exception of having a different person in mind at the time of painting. This technique would be valuable in the world of generative art as it alows different and personalised renderings of the same types of art work. 
 
 \section{Related work}
 You should find existing papers, group them into categories based on their approaches,
@@ -137,18 +131,8 @@ as long as you are consistent.
 
 \medskip
 \small
-[1] Alexander, J.A.\ \& Mozer, M.C.\ (1995) Template-based algorithms
-for connectionist rule extraction. In G.\ Tesauro, D.S.\ Touretzky and
-T.K.\ Leen (eds.), {\it Advances in Neural Information Processing
-  Systems 7}, pp.\ 609--616. Cambridge, MA: MIT Press.
 
-[2] Bower, J.M.\ \& Beeman, D.\ (1995) {\it The Book of GENESIS:
-  Exploring Realistic Neural Models with the GEneral NEural SImulation
-  System.}  New York: TELOS/Springer--Verlag.
-
-[3] Hasselmo, M.E., Schnell, E.\ \& Barkai, E.\ (1995) Dynamics of
-learning and recall at excitatory recurrent synapses and cholinergic
-modulation in rat hippocampal region CA3. {\it Journal of
-  Neuroscience} {\bf 15}(7):5249-5262.
+\bibliography{References}
+\bibliographystyle{plain}
 
 \end{document}
