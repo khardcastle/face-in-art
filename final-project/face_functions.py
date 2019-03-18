@@ -8,16 +8,18 @@ import dlib
 import cv2
 import glob
 import numpy as np
+import math
+
+
 # In[ ]:
 
 
 # crop the image so it's just the face
-def compute_face_crop(image_file):
+def compute_face_crop(image):
     
     # This will take an image file, and will return information about where the face is, the image with the face bounding box, and the cropped image
     
     # read image, copy it so nothing funky happens, convert to grayscale for opencv
-    image = cv2.imread(image_file,cv2.IMREAD_COLOR)
     image1 = np.copy(image)
     imgtest = cv2.cvtColor(image1, cv2.COLOR_BGR2GRAY)
 
@@ -48,7 +50,7 @@ def compute_face_crop(image_file):
         # save the cropped image
         cropped_image = image1[miny:maxy, minx:maxx,:]
         
-        return image, faces, face_detect, cropped_image, rectangle
+        return faces, face_detect, cropped_image, rectangle
 
 
 # In[ ]:
@@ -85,6 +87,37 @@ def find_center(image, points):
 
 # In[ ]:
 
+def similarityTransform(inPoints, outPoints) :
+    s60 = math.sin(60*math.pi/180)
+    c60 = math.cos(60*math.pi/180)  
+  
+    inPts = np.copy(inPoints).tolist()
+    outPts = np.copy(outPoints).tolist()
+    
+    xin = c60*(inPts[0][0] - inPts[1][0]) - s60*(inPts[0][1] - inPts[1][1]) + inPts[1][0]
+    yin = s60*(inPts[0][0] - inPts[1][0]) + c60*(inPts[0][1] - inPts[1][1]) + inPts[1][1]
+    
+    inPts.append([np.int(xin), np.int(yin)])
+
+    xout = c60*(outPts[0][0] - outPts[1][0]) - s60*(outPts[0][1] - outPts[1][1]) + outPts[1][0]
+    yout = s60*(outPts[0][0] - outPts[1][0]) + c60*(outPts[0][1] - outPts[1][1]) + outPts[1][1]
+    
+    outPts.append([np.int(xout), np.int(yout)])
+    
+    tform = cv2.estimateAffinePartial2D(np.array([inPts]), np.array([outPts]))
+    
+    return tform[0]
+
+ # In[ ]:
+
+def align_image(image, source_points, dest_points, w, h):
+
+	M1 = similarityTransform(source_points, dest_points)
+	translated_image = cv2.warpAffine(image, M1, (w,h))
+
+	return translated_image
+
+# In[ ]:
 
 # Check if a point is inside a rectangle
 def rectContains(rect, point) :

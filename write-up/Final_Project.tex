@@ -49,39 +49,39 @@
 \maketitle
 
 \begin{abstract}
-In this paper, we outline the implementation of a neural style transfer framework that will integrate a person's face in an artistic painting. For example, given a headshot and a picture of the Mona Lisa, this framework would inpaint the headshot face into the face of the Mona Lisa, while retaining the artistic style of the Mona Lisa. There are a number of existing applications that have focussed face swapping in recent years, however they have generally focussed on doing so for photograph images. Furthermore, the few methodologies that have used neural style transfer to adjusting such photos to an artistic style, have constrained their solution to well-aligned images that contain only a face (i.e., cropped images), without taking into account the pose of the face. Our approach is novel in that we aim to retaining the style and pose of the original work of art's face, regardless of the pose of the supplied image, and will reintroduce the face in the work of art as a whole. 
+In this paper, we present a method by which one can integrate a person's face into an artistic painting containing a face. For example, given a headshot and a picture of the Mona Lisa, this method will inpaint the face in the headshot photo into the face of the Mona Lisa, while retaining the artistic style of the Mona Lisa. To accomplish this task, we implemented two procedures: face-warping (to properly align the faces), and neural style transfer (to transfer the style of the painting to the headshot face). This approach builds on previous work in several ways. First, while there are a number of existing applications that have focused on face swapping in recent years, they have generally been applied to photograph images that have a similar style. Second, the few methodologies that have used neural style transfer combined with face-swapping have constrained their solution to well-aligned images that contain only a face (i.e., cropped images). In addition, these approaches have transfered the transfered the style of the artistic image to the headshot image, without putting the newly-styled headshot image into the artistic image. Thus, our approach is novel in that we aim to retain the style and pose of the original work of art's face, regardless of the pose of the supplied image, and  reintroduce the face in the work of art as a whole. 
 \end{abstract}
 
 \section{Introduction}  
-Neural style transfer is the technique of using deep neural networks to transfer the style of a given reference image to the content of another. Traditionally, such problems have been adressed with classic image processing techniques such as histogram matching \cite{neumann2005color}. However, in 2015 Gatys et all. \cite{gatys2015neural} introduced a novel technique that leverages the power of Convolutional Neural Networks to emulate famous painting styles in natural images. In their seminal paper, they proposed to use the encoding from different layers of a pre-trained CNN, to capture the style elements and content elements of images. They then used an interative approach to optimise an image with the objective of minimizing the distance between the style elements of the image and the reference work of art, while keeping changes to the content as small as possible. 
-\par
-Their work has inspired a number of new neural transfer algorithms, ranging from general models such as the work of Li and Wand \cite{li2016combining} that combined generative Markov random field models with deep convolutional neural networks, to highly specialised domain-specific models such as Jiang anf Fu's Fashion style generator \cite{jiang2017fashion}. While general models have shown great potential in a large number of applications, they have generally introduced visual artifacts which are especially striking in faces, given human's sensitivity for facial irregularities. The work of Selim et all. \cite{selim2016painting} introduced the first approach for single-example based head portrait painting not constrained to a specific style. Their approach was successful by introducing additional constraints that exploit human facial geometry through the notion of gains maps. However, their methodology focused on front-facing cropped facial images and does not yet generalise to different facial positions or introduction within the wider context of a full painting. 
-\par
-In this work, we aim to expand on the work of Selim et all by introducing a framework that combines different Neural Transfer techniques to tackle the challenge of introducing faces of slightly varing positions in a work of art. Our goal is to create a resulting image that looks similar to our reference work of art, but with the exception of having a different person in mind at the time of painting. This technique would be valuable in the world of generative art as it alows different and personalised renderings of the same types of art work. 
+The problem that we investigate in this project is how to inpaint a face from a photograph into the face in an artistic painting. Specifically, our framework takes two images: 1. a photograph image containing a face and 2. an artistic photo containing a face, and returns one image: a new version of the artistic photo with the face replaced. The replaced face is in the same pose, and in the same style, as the original artistic face, but the content of the face is drawn from the photographed face. To accomplish this task, we combine face-swapping with neural style transfer techniques. Our approach differs from traditional face-swapping methods in that it deal with images of fundamentally different style (artistic images versus photographs), and differs from traditional neural style transfer methods in that it requires face-swapping, and replaces a subset of the content (i.e. just the face) of the artistic image. However, our methods are similar in that our pipeline generates a new image - in other words, we use deep learning to generate personalized artwork. 
+
+With the advent of neural style transfer in 2015 \cite{gatys2015neural}, and generative adversarial networks in 2014 \cite{gan2014}, generating artwork via neural networks has become a topic of high interest. For example, in October 2018 an AI-generated piece of artwork sold for nearly half a million dollars. Recently, AI-generated art was featured in art galleries in San Francisco ("DeepDream") and New York City ("Faceless Portraits Transcending Time"). While our method simply alters previous versions of artwork rather than generating a fundamentally new piece of art, it does so in a personalized manner.
+
 
 \section{Related work}
-You should find existing papers, group them into categories based on their approaches,
-and discuss their strengths and weaknesses, as well as how they are similar to and differ
-from your work. In your opinion, which approaches were clever/good? What is the stateof-the-art?
-Do most people perform the task by hand? You should aim to have at least
-5 references in the related work. Include previous attempts by others at your problem,
-previous technical methods, or previous learning algorithms. Google Scholar is very useful
-for this: https://scholar.google.com/ (you can click “cite” and it generates MLA, APA,
-BibTeX, etc.)
+
+Neural style transfer is the technique of using deep neural networks to transfer the style of a given reference image to the content of another. Traditionally, such problems have been adressed with classic image processing techniques such as histogram matching \cite{neumann2005color}. However, in 2015 Gatys et al. \cite{gatys2015neural} introduced a novel technique that leverages the power of Convolutional Neural Networks to emulate famous painting styles in natural images. In their seminal paper, they proposed to use the encoding from different layers of a pre-trained CNN, to capture the style elements and content elements of images. They then used an interative approach to optimise an image with the objective of minimizing the distance between the style elements of the image and the reference work of art, while keeping changes to the content as small as possible. 
+
+Their work has inspired a number of new neural transfer algorithms, ranging from general models such as the work of Li and Wand \cite{li2016combining} that combined generative Markov random field models with deep convolutional neural networks, to highly specialised domain-specific models such as Jiang anf Fu's Fashion style generator \cite{jiang2017fashion}. While general models have shown great potential in a large number of applications, they have generally introduced visual artifacts which are especially striking in faces, given human's sensitivity for facial irregularities. The work of Selim et al. \cite{selim2016painting} introduced the first approach for single-example based head portrait painting not constrained to a specific style. Their approach was successful by introducing additional constraints that exploit human facial geometry through the notion of gains maps. However, their methodology focused on front-facing cropped facial images and does not yet generalise to different facial positions or introduction within the wider context of a full painting.
+
+In this work, we aim to expand on the work of Selim et al by introducing a framework that combines different Neural Transfer techniques to tackle the challenge of introducing faces of slightly varing positions in a work of art. Our goal is to create a resulting image that looks similar to our reference work of art, but with the exception of having a different person in mind at the time of painting. This technique would be valuable in the world of generative art as it alows different and personalised renderings of the same types of art work. 
+
+Add in description of complicated paper
+
+Add in face warping methods (in Selim and also in opencv) and face rotation methods
 
 \section{Dataset and Features}
-Describe your dataset: how many training/validation/test examples do you have? Is there
-any preprocessing you did? What about normalization or data augmentation? What is the
-resolution of your images? How is your time-series data discretized? Include a citation on
-where you obtained your dataset from. Depending on available space, show some examples
-from your dataset. You should also talk about the features you used. If you extracted
-features using Fourier transforms, word2vec, PCA,
-ICA, etc. make sure to talk about it. Try to include examples of your data in the report
-(e.g. include an image, show a waveform, etc.).
 
+Fortunately, as many of our methods will rely on pre-trained networks, we do not need large numbers of new images with which to train our network. However, there are large open-source datasets of artwork and faces available on the internet, which we plan to take advantage of in order to demonstrate our approach. To generate our dataset of artwork, we use the Web Gallery of Art \cite{WebGallery}. This dataset is free to use for educational purposes and contains the meta data and links to images for more than 45,000 works of art, 31,000 of which are paintings. In order to create the dataset, we wrote write a script to download these images (see github repo).  To generate a dataset of faces, we initially plan to use own headshots. However, we plan to use the celebA dataset \cite{liu2018large} if more face images are required.
+
+Show some examples
+give the resolution
 
 
 \section{ Methods }
+
+Solving this task requires solving several sub-problems: cropping faces, warping faces so that promiment landmarks are location-matched, performing neural style transfer in order to transfer the style of the artistic painting to the photographed face, and seamlessly replacing the face in the artistic painting with a new face. 
+
 Describe your learning algorithms, proposed algorithm(s), or theoretical proof(s). Make
 sure to include relevant mathematical notation. For example, you can include the loss function you are using. It is okay to use formulas from the lectures (online or in-class). For each algorithm, give a short description 
 of how it works. Again, we are looking for your understanding of how these deep
@@ -92,6 +92,7 @@ paragraphs. Note: Theory/algorithms projects may have an appendix showing extend
 proofs (see Appendix section below).
 
 \section{Experiments/Results/Discussion}
+
 You should also give details about what (hyper)parameters you chose (e.g. why did you
 use X learning rate for gradient descent, what was your mini-batch size and why) and how
 you chose them. What your primary metrics are: accuracy, precision,
