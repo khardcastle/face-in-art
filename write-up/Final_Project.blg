@@ -3,44 +3,58 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Final_Project.aux
 The style file: plain.bst
 Database file #1: References.bib
-You've used 5 entries,
+Warning--entry type for "WebGallery" isn't style-file defined
+--line 125 of file References.bib
+Warning--entry type for "Medium" isn't style-file defined
+--line 141 of file References.bib
+Warning--entry type for "dlibgit" isn't style-file defined
+--line 157 of file References.bib
+Warning--entry type for "NeuralStyleTranferGithub" isn't style-file defined
+--line 173 of file References.bib
+Warning--entry type for "opencvImplement" isn't style-file defined
+--line 419 of file References.bib
+Warning--entry type for "dt" isn't style-file defined
+--line 469 of file References.bib
+Warning--I didn't find a database entry for "Gulli"
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            528 strings with 4830 characters,
-and the built_in function-call counts, 2051 in all, are:
-= -- 210
-> -- 75
-< -- 3
-+ -- 30
-- -- 24
-* -- 122
-:= -- 308
-add.period$ -- 16
-call.type$ -- 5
-change.case$ -- 27
+            624 strings with 7107 characters,
+and the built_in function-call counts, 7748 in all, are:
+= -- 754
+> -- 353
+< -- 6
++ -- 141
+- -- 118
+* -- 504
+:= -- 1233
+add.period$ -- 62
+call.type$ -- 22
+change.case$ -- 125
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 94
-empty$ -- 170
-format.name$ -- 24
-if$ -- 460
+cite$ -- 22
+duplicate$ -- 295
+empty$ -- 630
+format.name$ -- 118
+if$ -- 1667
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 5
-newline$ -- 28
-num.names$ -- 10
-pop$ -- 34
+int.to.str$ -- 22
+missing$ -- 16
+newline$ -- 107
+num.names$ -- 44
+pop$ -- 154
 preamble$ -- 1
-purify$ -- 22
+purify$ -- 103
 quote$ -- 0
-skip$ -- 81
+skip$ -- 251
 stack$ -- 0
-substring$ -- 147
-swap$ -- 39
-text.length$ -- 3
+substring$ -- 495
+swap$ -- 89
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 20
+type$ -- 88
 warning$ -- 0
-while$ -- 20
-width$ -- 6
-write$ -- 57
+while$ -- 70
+width$ -- 24
+write$ -- 228
+(There were 7 warnings)
